@@ -1,69 +1,102 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,700&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,300;0,400;1,100&family=Roboto:wght@100;300;400;500;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+:root{
+  --primary: #118c4f;
+  --background: #f5f8ff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.primary{
+  color: var(--primary);
 }
 
-body {
+*{
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+body{
+  font-family: 'Roboto', 'Poppins', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans';
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+.container{
+  max-width: 1240px;
+  margin: auto;
+}
+
+.h1{
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+.h2{
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+.h5{
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+p{
+  font-size: 1.2rem;
+}
+
+.btn{
+  padding: 14px 32px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #ffff;
+  border-radius: 24px 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn:hover{
+  box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+}
+
+input{
+  padding: 12px 32px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  border-radius: 24px 4px;
+  margin-right: .8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+  .h1{
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
-  a:hover {
-    color: #747bff;
+  .h2{
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
-  button {
-    background-color: #f9f9f9;
+  .h5{
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  p{
+    font-size: 1rem;
+  }
+
+  .btn{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  input {
+    width: 100%;
   }
 }
